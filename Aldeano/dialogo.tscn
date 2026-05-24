@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://wvoo8472s6x2"]
+
+[ext_resource type="Texture2D" uid="uid://dcdfpwpwnjrkq" path="res://ui/background/Layer1.png" id="1_1tg34"]
+[ext_resource type="Script" uid="uid://bdn4ce2wkr0c6" path="res://Aldeano/dialogo.gd" id="1_pjk23"]
+[ext_resource type="Texture2D" uid="uid://btb3pbsm8xla" path="res://ui/background/Layer2.png" id="2_ah128"]
+[ext_resource type="Texture2D" uid="uid://bt4jpgm1msbd2" path="res://ui/background/Layer3.png" id="3_ou1t1"]
+[ext_resource type="Texture2D" uid="uid://cobi8l6pamfup" path="res://ui/aldeano/presenting.png" id="4_ah128"]
+[ext_resource type="Texture2D" uid="uid://bucm605yvm28d" path="res://ui/banner/scroll_banner.png" id="5_ou1t1"]
+[ext_resource type="Texture2D" uid="uid://wdsrtl1jdv7r" path="res://ui/botones/aceptar.png" id="6_3lie4"]
+[ext_resource type="Texture2D" uid="uid://wvqremamhh30" path="res://ui/botones/rechazar.png" id="7_pjk23"]
+[ext_resource type="Texture2D" uid="uid://dfner4x2hla0g" path="res://ui/botones/preguntar.png" id="8_gk1yl"]
+
+[node name="dialogo" type="Node2D" unique_id=283637888]
+script = ExtResource("1_pjk23")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1896905900]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1007131642]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=2132448374]
+position = Vector2(-41, -33)
+scale = Vector2(0.8743132, 0.88480395)
+texture = ExtResource("1_1tg34")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1355919319]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=1360880105]
+z_index = 1
+position = Vector2(-41, -33)
+scale = Vector2(0.8736263, 0.8774509)
+texture = ExtResource("2_ah128")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1424897819]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" unique_id=2026281260]
+z_index = 2
+position = Vector2(-57, -32)
+scale = Vector2(0.8866759, 0.85539216)
+texture = ExtResource("3_ou1t1")
+centered = false
+
+[node name="aldeano" type="Node2D" parent="." unique_id=1211672487]
+
+[node name="Sprite2D" type="Sprite2D" parent="aldeano" unique_id=2028333184]
+position = Vector2(635, -31)
+scale = Vector2(0.24171266, 0.23584251)
+texture = ExtResource("4_ah128")
+centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2072366254]
+
+[node name="pergamino" type="TextureRect" parent="CanvasLayer" unique_id=1995415142]
+offset_left = 5.0
+offset_top = 452.0
+offset_right = 734.0
+offset_bottom = 645.0
+texture = ExtResource("5_ou1t1")
+expand_mode = 1
+
+[node name="Texto Dialogo" type="Label" parent="CanvasLayer" unique_id=2007079497]
+offset_left = 116.0
+offset_top = 511.0
+offset_right = 627.0
+offset_bottom = 581.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 3
+
+[node name="BtnAceptar" type="TextureButton" parent="CanvasLayer" unique_id=292533680]
+offset_left = 36.0
+offset_top = 362.0
+offset_right = 5644.0
+offset_bottom = 1484.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("6_3lie4")
+
+[node name="BtnRechazar" type="TextureButton" parent="CanvasLayer" unique_id=2124171924]
+offset_left = 356.0
+offset_top = 358.0
+offset_right = 6055.999
+offset_bottom = 1537.9995
+scale = Vector2(0.053, 0.053)
+texture_normal = ExtResource("7_pjk23")
+
+[node name="BtnPreguntar" type="TextureButton" parent="CanvasLayer" unique_id=977508125]
+offset_left = 177.0
+offset_top = 420.0
+offset_right = 5785.0
+offset_bottom = 1542.0
+scale = Vector2(0.06, 0.06)
+texture_normal = ExtResource("8_gk1yl")
